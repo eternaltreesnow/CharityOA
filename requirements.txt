@@ -1,0 +1,6 @@
+flask==0.10.1
+itsdangerous==0.
+jinja2==2.8
+markupsafe==0.23
+werkzeug==0.10.4
+wheel==0.24.0

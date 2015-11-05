@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../static/img/logo.jpg">
+        <title>Calendar</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../static/lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <!-- Fullcalendar -->
+        <link rel="stylesheet" href="../static/lib/fullcalendar/fullcalendar.min.css">
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="../static/lib/normalize.css">
+        <!-- common.css -->
+        <link rel="stylesheet" href="../static/css/common.css">
+
+        <!-- page css -->
+        <link rel="stylesheet" href="../static/css/calendar.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
+        <!-- [if lt IE 9]>
+            <script src="lib/html5shiv.min.js"></script>
+            <script src="lib/respond.min.js"></script>
+        <![endif] -->
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">OA System</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Link1</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Calendar</a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search..." />
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar"></div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="addEventModalLabel">New Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="event_title" class="control-label">Title:</label>
+                                <input type="text" class="form-control" id="event_title">
+                            </div>
+                            <div class="form-group">
+                                <label for="event_des" class="control-label">Description:</label>
+                                <input type="text" class="form-control" id="event_des">
+                            </div>
+                            <div class="form-group">
+                                <label for="event_start" class="control-label">Start Time:</label>
+                                <input type="text" class="form-control" id="event_start">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" id="addEventBtn">Submit</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="deleteEventModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="deleteEventModalLabel">Delete Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you confirm to delete the Event&hellip;</p>
+                        <input type="hidden" id="deleteEventId" value>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" id="deleteEventModalBtn">Delete</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="../static/lib/jquery-2.0.3.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../static/lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <!-- Fullcalendar -->
+        <script src="../static/lib/fullcalendar/moment.min.js"></script>
+        <script src="../static/lib/fullcalendar/fullcalendar.min.js"></script>
+        <script src="../static/lib/fullcalendar/lang/zh-cn.js"></script>
+
+        <script src="../static/js/calendar.js"></script>
+    </body>
+</html>

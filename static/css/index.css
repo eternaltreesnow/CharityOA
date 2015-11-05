@@ -1,0 +1,21 @@
+.header .navbar-logo {
+    background: url('../img/logo_trans.png') no-repeat;
+    background-size: 35px 35px;
+    background-position: 0 50%;
+}
+.header .navbar-logo-txt {
+    padding-left: 25px;
+}
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #eff4fa;
+    border-right: 1px solid #d6dfea;
+}

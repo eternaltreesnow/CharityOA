@@ -1,0 +1,180 @@
+.calendar-container {
+    margin-top: 20px;
+}
+/* calendar top bar */
+.calendar-topbar {
+    position: relative;
+    height: 33px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+.calendar-topbar .topbar-btn {
+    display: block;
+    width: 40px;
+    height: 26px;
+    float: left;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.calendar-topbar .topbar-btn:hover {
+    background: #EEE;
+}
+.calendar-topbar .btn-prev-month {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+.calendar-topbar .btn-next-month {
+    border-radius: 0 4px 4px 0;
+}
+.calendar-topbar .topbar-title {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: baseline;
+    line-height: 33px;
+    color: #84A099;
+    font-family: arial, sans-serif;
+}
+/* calendar content */
+.calendar {
+    padding: 10px;
+    position: relative;
+    background: #FFFFFF;
+}
+.calendar .week-title {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.calendar .weekdays {
+    display: table-row;
+}
+.calendar .weekday {
+    display: table-cell;
+    width: 14.286%;
+    height: 12px;
+    border-bottom: 2px solid #cccccc;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 0 0 5px 0;
+    color: #AAAAAA;
+    text-align: center;
+}
+.calendar .week {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    position: relative;
+}
+.calendar .days {
+    display: table-row;
+}
+.calendar .day {
+    display: table-cell;
+    width: 14.286%;
+    height: 110px;
+    border-right: 1px solid #dddddd;
+    vertical-align: top;
+    padding: 0 0 20px 0;
+    max-height: 150px;
+    overflow: hidden;
+}
+.calendar .day:last-of-type {
+    border-right: none;
+}
+.calendar .day-info {
+    width: 100%;
+    height: 12px;
+    padding: 6px 8px 12px;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: arial;
+    color: #888888;
+}
+.calendar .day.other-month .day-info {
+    color: #bbbbbb;
+}
+.calendar .day.sat .day-info {
+    color: #C43515;
+}
+.calendar .day.sun .day-info {
+    color: #C43515;
+}
+.calendar .day-num {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+.calendar .event-space {
+    position: relative;
+    height: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+    margin: 1px 2px 2px;
+    border-radius: 4px;
+    background: #ccc;
+}
+
+.simple-popover {
+    position: absolute;
+    z-index: 200;
+}
+.simple-popover .simple-popover-content {
+    padding: 10px 15px;
+    background: #FFF;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+.simple-popover .cal-event-click-popover {
+    width: 240px;
+}
+.simple-popover .time {
+    color: #999999;
+    font-size: 14px;
+}
+.simple-popover .content {
+    margin-bottom: 10px;
+    white-space: normal;
+}
+.simple-popover .participant {
+    display: inline-block;
+    margin-right: 4px;
+}
+.simple-popover .participant .avatar {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+}
+.simple-popover .links {
+    font-size: 12px;
+    border-top: 1px solid #DFDFDF;
+    margin: 5px 0 0 0;
+    padding: 8px 0 0 0;
+}
+.simple-popover .links .delete-link {
+    float: right;
+    color: #E2AFAF;
+}
+.simple-popover .links .delete-link:hover {
+    color: #CF372B;
+}
+.simple-popover .links .edit-link {
+    float: right;
+    margin-right: 5px;
+}
+.simple-popover .simple-popover-arrow {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+}

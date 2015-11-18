@@ -16,6 +16,16 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 /* Page setting */
+body {
+    height: 100%;
+    background-attachment: fixed !important;
+    background: #5E7A9B;
+    background: -webkit-linear-gradient(top, #355069 0, #5E7A9B 100%);
+    background: -moz-linear-gradient(top, #355069 0, #5E7A9B 100%);
+    background: -o-linear-gradient(top, #355069 0, #5E7A9B 100%);
+    background: linear-gradient(top, #355069 0, #5E7A9B 100%);
+    -webkit-font-smoothing: antialiased;
+}
 .header {
     height: 80px;
     overflow: hidden;
@@ -47,10 +57,15 @@ a:link, a:visited, a:hover, a:active {
     color: #337ab7;
 }
 .content .login-form {
-    max-width: 330px;
+    width: 40%;
+    min-width: 430px;
+    padding: 15px 50px 25px 50px;
     margin: 40px auto;
+    background: #eff4fa;
+    border-radius: 10px;
 }
 .content .form-header {
+    color: #5E7A9B;
     text-align: center;
 }
 .content .verifyArea {
@@ -76,6 +91,8 @@ a:link, a:visited, a:hover, a:active {
     font-family: Microsoft YaHei;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     color: #337ab7;
     background: #eff4fa;
     border-top: 1px solid #d6dfea;

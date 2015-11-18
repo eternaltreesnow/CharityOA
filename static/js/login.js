@@ -36,8 +36,22 @@ $(function() {
         var username = $userName.val();
         var password = $password.val();
         var verify = $verify.val();
+        var data = {
+            'username' : username,
+            'password' : password,
+            'verify' : verify
+        };
         if(checkValidateForm(username, password, verify)) {
-            document.location = 'index.html';
+            $.ajax({
+                url: "",
+                type: "POST",
+                dataType: 'json',
+                async: false,
+                data: data,
+                success: function(data) {
+                    document.location = 'index.html';
+                }
+            });
         }
     });
 });
